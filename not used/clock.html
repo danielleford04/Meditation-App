@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+</head>
+<body>
+	
+	<body ng-app="mehmetcankerApp">
+ 		   
+		<div ng-controller="counterCtrl">
+			   
+			 <h3>Timer</h3> <!-- ! -->
+			 <img src='https://insighttimer.com/images/bell_icon_big.png' width='100'><br>
+			<div id="timer"> <!-- ! -->
+			<p>{{min}} : {{sec}}</p>
+			<span ng-hide="durationDisappear">Timer Duration: <input ng-change="enterTime()" type="text" name="timer" ng-model="min" style="width: 20px;"> minutes.</span><br>   <!-- mine -->
+    		<button ng-click="countdown()">Start</button> 
+   			<button ng-click="pause()">Pause</button>
+   			<button ng-click="stop()">Cancel</button>
+        
+		</div>
+  
+
+
+<script src="clock.js"></script>
+</body>
+</html>
